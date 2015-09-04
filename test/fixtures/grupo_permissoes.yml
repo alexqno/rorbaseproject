@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  grupo_id: 1
+  permissao_id: 1
+  valor: MyString
+
+two:
+  grupo_id: 1
+  permissao_id: 1
+  valor: MyString

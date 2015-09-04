@@ -1,0 +1,32 @@
+<header>
+	<div>
+		<nav>
+			<ul>
+				<% if logged_in? %>
+					<% if tem_permissao('permissaoUsuarios') %>
+						<li>
+							<%= link_to "Usuarios", users_path %>
+						</li>
+					<% end %>
+					<li>
+						<ul>
+							<li>
+								<%= link_to "Perfil", current_user.pessoa %>
+							</li>
+							<li>
+								<%= link_to "Editar", edit_pessoa_path(current_user.pessoa) %>
+							</li>
+							<li>
+								<%= link_to "Log out", sign_out_path, method: "delete" %>
+							</li>
+						</ul>
+					</li>
+				<% else %>
+					<li>
+						<%= link_to "Log in", root_path %>
+					</li>
+				<% end %>
+			</ul>
+		</nav>
+	</div>
+</header>

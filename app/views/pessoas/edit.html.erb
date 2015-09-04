@@ -1,0 +1,33 @@
+<h1>Editar perfil</h1>
+<%= form_for @pessoa do |f| %>
+	<% if @pessoa.errors.any? %>
+		<div id="error_explanation">
+			<div class="alert-error">
+				O formulário contém <%= pluralize(@pessoa.errors.count, "erro") %>.
+			</div>
+			<ul>
+				<% @pessoa.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+	
+	<div class="field">
+		<%= f.label :nome %>
+		<%= f.text_field :nome %>
+	</div>
+
+	<div class="field">
+		<%= f.label :sobrenome %>
+		<%= f.text_field :sobrenome %>
+	</div>
+
+	<% if current_user == @pessoa.user %>
+		<%= link_to "Opcoes de Conta", edit_user_path() %>
+	<% end %>
+
+	<div class="actions">
+		<%= f.submit "Cadastrar"%>
+	</div>
+<% end %>

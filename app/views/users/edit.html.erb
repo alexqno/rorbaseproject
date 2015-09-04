@@ -1,0 +1,47 @@
+<h1>Editar Usuario</h1>
+<%= form_for @user do |f| %>
+	<% if @user.errors.any? %>
+		<div id="error_explanation">
+			<div class="alert-error">
+				O formulário contém <%= pluralize(@user.errors.count, "erro") %>.
+			</div>
+			<ul>
+				<% @user.errors.full_messages.each do |msg| %>
+					<li><%= msg %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+	
+	<div class="field">
+		<%= f.label :login %>
+		<%= f.text_field :login %>
+	</div>
+	
+	<div class="field">
+		<%= f.label :password %>
+		<%= f.password_field :password %>
+	</div>
+
+	<div class="field">
+		<%= f.label :password_confirmation %>
+		<%= f.password_field :password_confirmation %>
+	</div>
+	
+	<% if logged_in? && current_user.grupo.is_root %>
+		<div class="field">
+			<%= f.label :grupo %>
+			<%= f.collection_select(:grupo_id, Grupo.all, :id, :descricao) %>
+		</div>
+	<% else %>
+		<%= f.hidden_field :grupo_id, :value => @user.grupo.id %>
+	<% end %>
+
+	<div class="actions">
+		<%= f.submit "Cadastrar"%>
+	</div>
+<% end %>
+
+<ul>
+	<li><%= link_to "Apagar", @user, method: :delete%></li>
+</ul>

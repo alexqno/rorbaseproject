@@ -1,0 +1,31 @@
+<h1> Users </h1>
+<table>
+	<thead>
+		<tr>
+			<th>Nome</th>
+			<th>Login</th>
+			<th colspan="2"></th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @users.each do |user| %>
+			<tr>
+				<td><%= user.pessoa.nome %> <%= user.pessoa.sobrenome %></td>
+				<td><%= user.login %></td>
+				<td>
+					<% if (tem_permissao('permissaoUsuarios') || current_user == user) %>
+						<%= link_to "Editar", edit_pessoa_path(user.pessoa) %>
+					<% end %>
+				</td>
+				<td><%= link_to "Visualizar", user.pessoa %></td>
+				<td>
+					<%if user.ativo?%>
+						<%= link_to "Cancelar", users_cancelar_path(:id => user.id), method: :patch %>
+					<%else%>
+						<%= link_to "Ativar", users_ativar_path(:id => user.id), method: :patch %>
+					<%end%>
+				</td>
+			</tr>
+		<%end%>
+	</tbody>
+</table>
