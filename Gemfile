@@ -29,6 +29,15 @@ gem 'bcrypt'
 # Para as chaves estrangeiras
 gem 'immigrant', '~> 0.3.1'
 
+# jQuery Ui
+gem 'jquery-ui-rails'
+
+# Twitter Bootstrap
+gem 'bootstrap-sass', '~> 3.3.5.1'
+
+# Font Awesome
+gem 'font-awesome-rails', '~> 4.4.0.0'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
