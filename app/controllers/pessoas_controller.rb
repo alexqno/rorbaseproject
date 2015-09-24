@@ -1,4 +1,6 @@
 class PessoasController < ApplicationController
+	before_action :authorize
+
 	def show
 		@pessoa = Pessoa.find(params[:id])
 	end

@@ -12,27 +12,10 @@
  *
  *= require beyond/bootstrap.min
  *= require font-awesome.css.erb
- *= require beyond/4095.min
- *= require beyond/4095-rtl.min
- *= require beyond/azure.min
- *= require beyond/beyond.min
- *= require beyond/black.min
- *= require beyond/blue.min
- *= require beyond/darkblue.min
- *= require beyond/darkred.min
- *= require beyond/deepblue.min
- *= require beyond/demo.min
- *= require beyond/animate.min
- *= require beyond/gray.min
- *= require beyond/green.min
- *= require beyond/lesshat.min
- *= require beyond/mixins-rtl.min
- *= require beyond/orange.min
- *= require beyond/pink.min
- *= require beyond/purple.min
- *= require beyond/skins-mixins.min
- *= require beyond/teal.min
- *= require beyond/typicons.min
  *= require beyond/weather-icons.min
+ *= require beyond/beyond.min
+ *= require beyond/demo.min
+ *= require beyond/typicons.min
+ *= require beyond/animate.min
  *= require_self
  */
