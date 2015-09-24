@@ -13,8 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
-//= require bootstrap.min
-//= require bootstrap-sprockets
+//= require beyond/bootstrap.min
 //= require beyond/skins.min
 //= require beyond/slimscroll/jquery.slimscroll.min
 //= require beyond/beyond.min
@@ -73,3 +72,4 @@
 //= require beyond/toastr/toastr.min
 //= require beyond/validation/bootstrapValidator.min
 //= require turbolinks
+//= require_tree .
