@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   before_action :block_access, except: [:destroy]
+  layout "login"
 
   def create
   	@user = User.find_by(login: params[:session][:login].downcase)
