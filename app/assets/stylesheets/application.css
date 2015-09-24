@@ -10,20 +10,19 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require beyond/bootstrap.min
  *= require font-awesome.css.erb
  *= require beyond/4095.min
  *= require beyond/4095-rtl.min
- *= require beyond/animate.min
  *= require beyond/azure.min
  *= require beyond/beyond.min
- *= require beyond/beyond-rtl.min
  *= require beyond/black.min
  *= require beyond/blue.min
- *= require beyond/bootstrap.min
  *= require beyond/darkblue.min
  *= require beyond/darkred.min
  *= require beyond/deepblue.min
  *= require beyond/demo.min
+ *= require beyond/animate.min
  *= require beyond/gray.min
  *= require beyond/green.min
  *= require beyond/lesshat.min
