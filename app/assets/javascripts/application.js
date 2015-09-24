@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require beyond/bootstrap.min
-//= require beyond/skins.min
 //= require beyond/slimscroll/jquery.slimscroll.min
 //= require beyond/beyond.min
 //= require beyond/bootbox/bootbox.min
