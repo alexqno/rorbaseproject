@@ -25,10 +25,14 @@ module SessionsHelper
 	def tem_permissao(chave)
 		permissao = Permissao.find_by(chave: chave)
 		gp = current_user.grupo.grupo_permissoes.where(permissao_id: permissao.id)
-		if (permissao.tipo == Permissao.tipos[:acesso] && gp.valor != "A")
-			true
-		elsif (permissao.tipo == Permissao.tipos[:simnao] && gp.valor != "S")
-			true
+		if (permissao.acesso?)
+			if gp.first.valor == "A"
+				true
+			end
+		elsif (permissao.simnao?)
+			if gp.first.valor == "S"
+				true
+			end
 		else
 			false
 		end
