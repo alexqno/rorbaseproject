@@ -7,18 +7,9 @@ class SessionsController < ApplicationController
   	if @user && @user.authenticate(params[:session][:password])
   		if @user.ativo?
         sign_in
-  		  puts "===================="
-        puts "ATIVO"
-        puts "===================="
         if @user.grupo.is_root
-          puts "===================="
-          puts "EH ROOT"
-          puts "===================="
           redirect_to users_path
         else
-          puts "===================="
-          puts "NAO EH ROOT"
-          puts "===================="
           redirect_to @user.pessoa
         end
       else
